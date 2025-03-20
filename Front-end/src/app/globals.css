@@ -1,0 +1,230 @@
+/* =================================
+   Global Styles
+   ================================= */
+
+body {
+  font-family: "Poppins", sans-serif; /* Use a modern font */
+  margin: 0;
+  padding: 0;
+  background: #f3f2f8; /* Softer background */
+  color: #333; /* Darker text for readability */
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased; /* Improve font rendering */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
+  max-width: 1000px; /* Slightly wider container */
+  margin: 0 auto;
+  padding: 30px; /* More padding */
+}
+
+button {
+  padding: 12px 20px; /* Larger buttons */
+  border: none;
+  border-radius: 8px; /* More rounded */
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500; /* Semi-bold */
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px; /* More spacing */
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #555;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff; /* Highlight on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2); /* Subtle shadow */
+}
+
+/* =================================
+   Navigation Styles
+   ================================= */
+header {
+  background: linear-gradient(
+    to right,
+    #667eea,
+    #764ba2
+  ); /* Gradient background */
+  color: #fff;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+  border-radius: 12px; /* Rounded header */
+}
+
+header h1 {
+  font-size: 1.75rem; /* Larger heading */
+  margin: 0;
+  font-weight: 600; /* Bold heading */
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  margin-right: 30px; /* More spacing */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  opacity: 0.8; /* Slightly faded */
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 1; /* Fully visible on hover */
+}
+
+/* =================================
+   Home Page Styles
+   ================================= */
+
+main {
+  padding: 30px;
+}
+
+main h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+main button {
+  background: #007bff;
+  color: #fff;
+  border-radius: 10px;
+}
+
+main button:hover {
+  background: #0056b3;
+}
+
+.home-notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Wider cards */
+  gap: 30px; /* More spacing */
+  margin-top: 30px;
+}
+
+.note-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 25px;
+  position: relative; /* For the "pin" */
+}
+
+.note-card:hover {
+  transform: translateY(-8px); /* More pronounced lift */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+.note-card::before {
+  content: ""; /* "Pin" effect */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  background: #ffc107; /* Yellow */
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.note-title {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #222;
+}
+
+/* =================================
+   Sign In/Up Page Styles
+   ================================= */
+
+.signin-container,
+.signup-container {
+  max-width: 450px; /* Slightly wider */
+  margin: 40px auto; /* More spacing */
+  padding: 40px;
+  background: #fff;
+  border-radius: 16px; /* More rounded */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+}
+
+.signin-container h1,
+.signup-container h1 {
+  text-align: center;
+  margin-bottom: 30px; /* More spacing */
+  font-size: 2rem;
+  font-weight: 700; /* Bolder heading */
+  color: #333;
+}
+
+.signin-container form,
+.signup-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signin-container input,
+.signup-container input {
+  margin-bottom: 20px; /* Even more spacing */
+}
+
+.signin-container button[type="submit"],
+.signup-container button[type="submit"] {
+  background: linear-gradient(
+    to right,
+    #a78dde,
+    #667eea
+  ); /* Gradient buttons */
+  color: #fff;
+  padding: 14px; /* Larger buttons */
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signin-container button[type="submit"]:hover,
+.signup-container button[type="submit"]:hover {
+  transform: translateY(-3px); /* Lift on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+/* Add a subtle animation to the whole page */
+.app-container {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
